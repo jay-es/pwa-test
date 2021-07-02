@@ -2,6 +2,8 @@
   "name": "PWA Test",
   "share_target": {
     "action": "index.html",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
     "params": {
       "title": "name",
       "text": "description",
@@ -19,5 +21,8 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ]
+  ],
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "theme_color": "#250858"
 }
