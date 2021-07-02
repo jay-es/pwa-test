@@ -1,0 +1,11 @@
+{
+  "name": "PWA Test",
+  "share_target": {
+    "action": "index.html",
+    "params": {
+      "title": "name",
+      "text": "description",
+      "url": "link"
+    }
+  }
+}

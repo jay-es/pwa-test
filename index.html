@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="manifest.webmanifest" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      window.addEventListener("load", () => {
+        document.getElementById("app").innerText = window.location.search;
+      });
+
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js").then(function () {
+          console.log("ServiceWorker was registered.");
+        });
+      }
+    </script>
+  </body>
+</html>
