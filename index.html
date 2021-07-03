@@ -8,10 +8,17 @@
     <link rel="manifest" href="manifest.webmanifest?2" />
   </head>
   <body>
-    <div id="app"></div>
+    <textarea id="app" style="width: 99%; height: 10em;"></textarea>
     <script>
       window.addEventListener("load", () => {
-        document.getElementById("app").innerText = window.location.search;
+        let text = ''
+
+        const searchParams = new URLSearchParams(window.location.search)
+        for (const [key, value] of searchParams) {
+          text += `${key}: ${value}\n`
+        }
+
+        document.getElementById("app").value = text;
       });
 
       if ("serviceWorker" in navigator) {
